@@ -24,7 +24,7 @@ export default function Main() {
   }
   const view = data.filter((view) => view.id == selectedId)[0];
   return (
-    <>
+    <div style={{fontFamily:"Tajawal"}}>
       <Header theme="light" />
       <img className={styles.background} src={background} alt="background" />
       <section className={styles.main__section1}></section>
@@ -101,7 +101,7 @@ export default function Main() {
           <img src={smallGoat} alt="small goat" />
           <MessageSender Y={10} />
       </section>
-    </>
+    </div>
   );
 }
 
