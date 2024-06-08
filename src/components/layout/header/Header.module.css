@@ -1,0 +1,99 @@
+* {
+  font-family: "Tajawal" sans-serif;
+}
+header {
+  display: flex;
+  color: white;
+  direction: rtl;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-right: 146px;
+  width: 3424px;
+  padding-top: 40px;
+  z-index: 1000;
+}
+
+.logo {
+  padding-left: 70px;
+}
+
+.dark h1,
+.light h1 {
+  color: #431818;
+  font-size: 20px;
+  padding-right: 20px;
+  font-weight: 400;
+}
+.light h1 {
+  color: white;
+}
+a {
+  text-decoration-line: none;
+}
+header h1,
+.cart {
+  padding-top: 10px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.73, -0.01, 0.31, 1);
+}
+header h1 {
+  width:fit-content;
+  height:fit-content
+}
+header h1:hover,
+.cart:hover {
+  transform: scale(1.07);
+}
+
+header .darkActive h1,
+header .lightActive h1 {
+  opacity: 60%;
+  cursor:default
+}
+header .darkActive h1:hover,
+header .lightActive h1:hover {
+  transform: scale(1);
+}
+
+header .seperator {
+  background-color: #260606;
+  height: .5px;
+  width: 1424px;
+  border-radius: 400px;
+  position: relative;
+  left: 1150px;
+  top: 130px;
+}
+
+.cart {
+  padding-right: 100px;
+  padding-top: 25px;
+}
+.save {
+  padding-right: 20px;
+  cursor: pointer;
+  opacity: 40%;
+}
+.cartProds__counter {
+  background-color: #320404;
+  width:20px;
+  height:20px;
+  border-radius:18px;
+  color:white;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size:11px;
+  position:relative;
+  left:-90px;
+  top:-50px;
+  display: none;
+}
+.header__activeCart {
+  opacity:60%;
+}
+.header__normalCart {
+  opacity:100%
+}

@@ -1,0 +1,41 @@
+.viewer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  direction: rtl;
+  color: white;
+}
+.viewer__background {
+  position: absolute;
+  transition-duration: .3s;
+  z-index: -1;
+}
+
+.viewer__shadow {
+  width: 1424px;
+  height: 744px;
+  background: rgb(4,6,12);
+  background: linear-gradient(-90deg, #04060cd3 12%, rgba(0, 0, 0, 0) 100%);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
+
+.viewer__title {
+  font-size: 50px;
+  font-weight: 500;
+  padding-right: 80px;
+  position: relative;
+  top: 140px;
+}
+.viewer__desc {
+  font-size: 23px;
+  font-weight: 300;
+  padding-top:150px;
+  padding-right: 80px;
+  position: relative;
+  width: 450px;
+  opacity:56%;
+}

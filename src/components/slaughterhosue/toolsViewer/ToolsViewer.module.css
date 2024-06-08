@@ -1,0 +1,54 @@
+.tool__container {
+  width: 1424px;
+  color: white;
+  font-family: "Tajawal";
+  height: 593px;
+  overflow: hidden;
+}
+.tool__container img {
+  position: absolute;
+}
+.tool__container h1 {
+  position: relative;
+  font-weight: 600;
+  font-size: 95px;
+  text-align: end;
+  padding-right: 80px;
+  padding-top: 50px;
+  z-index: 2;
+}
+.tool__container p {
+  position: relative;
+  font-weight: 400;
+  font-size: 28px;
+  opacity: 67%;
+  padding-right: 80px;
+  top: -40px;
+  text-align: end;
+  padding-left: 800px;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+  z-index: 2;
+}
+.tool__container .backShadow {
+  position: relative;
+  height: 45rem;
+  width: 528px;
+  left: 56.25rem;
+  top: -40.5rem;
+}
+.ltr h1 {
+  text-align: start;
+  padding-right: 0;
+  left: 115px;
+}
+.ltr p {
+  text-align: start;
+  padding-left: 0;
+  width: 518px;
+  left: 70px;
+  direction: rtl;
+}
+.ltr img {
+  right: 0;
+}

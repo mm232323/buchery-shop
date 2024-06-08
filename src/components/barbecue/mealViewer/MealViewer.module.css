@@ -1,0 +1,55 @@
+.meal__container {
+  position: relative;
+  font-family: "Tajawal";
+  color: white;
+  width: fit-content;
+  height: 726px;
+  transition-duration: 0.4s;
+  cursor: default;
+}
+.left_side {
+  left: -20px;
+}
+.right_side {
+  left: 120px;
+}
+.meal__container h3 {
+  position: relative;
+  font-weight: 600;
+  top: -350px;
+  font-size: 61px;
+  left: 130px;
+  z-index: 2;
+}
+.right_side h3 {
+  left: 210px;
+}
+.meal__container p {
+  position: relative;
+  font-weight: 200;
+  top: -400px;
+  font-size: 40px;
+  left: 280px;
+  z-index: 2;
+}
+.right_side p {
+  left: 340px;
+}
+.meal__container .shadow__background {
+  width: 672px;
+  height: 626px;
+  background-image: linear-gradient(to top, #110101a6, transparent);
+  position: relative;
+  border-radius: 30px 0;
+  top: -62rem;
+}
+.right_side .shadow__background {
+  border-radius: 0 30px;
+  left: 30px;
+}
+.left_side:hover {
+  left: 0;
+}
+.right_side:hover {
+  left: 100px;
+}

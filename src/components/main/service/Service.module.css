@@ -1,0 +1,19 @@
+.service__container {
+ padding-right:70px;
+ color:#571D1D;
+ text-align: center;
+ font-size:30px;
+ transition-duration: .5s;
+ transition-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
+}
+.service__container h2 {
+ font-weight:300;
+}
+.service__container img {
+ box-shadow:4px 13px 23px 0 rgba(0, 0, 0, 0.13);
+ border-radius:38px;
+ border:1px #2e1414b2 solid;
+}
+.service__container:hover {
+ transform:translateY(-15px)
+}

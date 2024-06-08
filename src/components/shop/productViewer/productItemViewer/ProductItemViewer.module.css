@@ -1,0 +1,88 @@
+.product_item__container {
+ position:relative;
+ top:-20px;
+ padding-right:40px;
+}
+.product_item__img {
+ position:absolute;
+ top:-50px;
+ z-index:2;
+ right:0;
+}
+.product_item__details {
+ background-color:#f3f3f3cc;
+ width:423px;
+ height:340px;
+ border-radius: 26px;
+ position:relative;
+ top:150px;
+}
+.product_item__details h3 {
+ padding-right:20px;
+ font-weight:300;
+ font-size:43px;
+ text-shadow:0 4px 10px rgba(0, 0, 0, 0.267);
+ position:relative;
+ top:150px;
+ direction:rtl;
+}
+.product_item__details h5 {
+ font-weight:300;
+ font-size:30px;
+ text-shadow:0 4px 10px rgba(0, 0, 0, 0.219);
+ position:relative;
+ top:50px;
+ direction:ltr;
+ left:60px;
+ opacity:59%;
+ text-decoration:line-through;
+}
+.product_item__details h4 {
+ font-weight:500;
+ font-size:50px;
+ position:relative;
+ left:40px;
+ text-shadow:0 6px 12px rgba(0, 0, 0, 0.212);
+}
+
+.product_item__addToCart {
+ color:white;
+ font-family:"Tajawal";
+ font-size:24px;
+ font-weight:300;
+ direction:rtl;
+ width:180px;
+ height:54px;
+ border-radius:9px;
+ border:none;
+ position:relative;
+ top:-120px;
+ left:220px;
+ box-shadow:0 5px 10px rgba(0, 0, 0, 0.13);
+ cursor:pointer;
+ transition-duration: .45s;
+}
+.product_item__addToCart p {
+ position:absolute;
+ padding-right:20px;
+ top:-15px;
+ direction:rtl;
+ transition-duration: .45s ;
+}
+.product_item__addToCart .icon {
+ position:absolute;
+ left:30px;
+ top:14px;
+ transition-duration:.45s;
+}
+.product_item__addToCart:hover {
+ p {
+  opacity:0;
+  filter:blur(5px);
+  transform:translateX(10px)
+ }
+ .icon {
+  left:75px;
+  transform: scale(1.2);
+ }
+}

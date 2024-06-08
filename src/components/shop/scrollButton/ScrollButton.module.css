@@ -1,0 +1,19 @@
+.scroll_button__container {
+ color:white;
+ font-weight:400;
+ font-size:30px;
+ padding: 10px 40px;
+ border:none;
+ border-radius:6px;
+ transition-duration:.45s;
+ transition-timing-function: cubic-bezier(0.73, -0.01, 0.31, 1);
+ margin-right:60px;
+ position:relative;
+ left:50px;
+ box-shadow:2px 6px 23px 0 rgba(0, 0, 0, 0.212);
+ cursor: pointer;
+ font-family:"Tajawal"
+}
+.scroll_button__container:hover {
+ transform:scale(1.05)
+}

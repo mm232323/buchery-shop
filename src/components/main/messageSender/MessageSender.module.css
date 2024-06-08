@@ -1,0 +1,59 @@
+.message_sender__container {
+  position: absolute;
+  top: 200px;
+  right: 30px;
+  font-family: "Tajawal";
+  direction: rtl;
+}
+.message_sender__container label {
+  color: #431818;
+  font-weight: 100;
+  font-size: 20px;
+  margin-bottom: 200px;
+}
+.message_sender__container input,
+.message_sender__container textarea {
+  font-family: "Tajawal";
+  color: #431818;
+  font-size: 15px;
+  background-color: rgba(255, 255, 255, 0.548);
+  border-radius: 5px;
+  border: 0.3px #4318188a solid;
+  width: 650px;
+  max-width: 650px;
+  min-width: 100px;
+  height: 41px;
+  max-height: 160px;
+  min-height: 50px;
+  transition-duration: 0.5s;
+  padding-right: 10px;
+}
+.message_sender__container .error {
+  color:red;
+  background-color:rgba(255, 203, 203, 0.548);
+  border-color:rgb(165, 9, 9);
+}
+.message_sender__container textarea {
+  padding-top: 10px;
+}
+.message_sender__container input:focus,
+.message_sender__container textarea:focus {
+  outline: none;
+  border: 1px #431818 solid;
+}
+.message_sender__container button {
+  width: 665px;
+  background-color: #711f1f;
+  color: white;
+  border-radius: 5px;
+  height: 69px;
+  font-size: 29px;
+  border: none;
+  font-family: "Tajawal";
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  cursor:pointer;
+}
+.message_sender__container button:hover {
+  background-color: #571d1d;
+}

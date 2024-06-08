@@ -1,0 +1,29 @@
+.offer__container {
+  position: relative;
+}
+.offer__container .offer__title1,
+.offer__container .offer__title2 {
+ color:white;
+ font-size:80px;
+ font-weight:600;
+ position:absolute;
+ width:500px;
+ left:56.25rem;
+ top:11.75rem;
+ height:fit-content;
+ text-shadow:16px 17px 29px rgba(0, 0, 0, 0.219);
+ text-align: center;
+}
+.offer__container .offer__title2 {
+ left:60px;
+ top:11.75rem;
+}
+.offer__container .timer {
+ color:white;
+ font-weight:400;
+ position:absolute;
+ font-size:40px;
+ top:28rem;
+ left:14rem;
+ text-shadow:10px 12px 29px rgba(0, 0, 0, 0.219)
+}

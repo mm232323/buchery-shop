@@ -1,0 +1,24 @@
+.location__container {
+ background-image:linear-gradient(45deg,#260606,#431818);
+ width:1122px;
+ height:438px;
+ border-radius: 23px;
+ margin-bottom:120px;
+ position:relative;
+ left:60px;
+ box-shadow:0 34px 82.9px 0 rgba(17, 2, 2, 0.356);
+ font-family:'Tajawal';
+ color:white;
+ overflow: hidden;
+}
+.location__container h1 {
+ font-weight:400;
+ font-size:35px;
+ width:700px;
+ padding-right:22px;
+}
+.location__container img {
+ position:absolute;
+ top:0;
+ left:0;
+}

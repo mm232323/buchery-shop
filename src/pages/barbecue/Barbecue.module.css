@@ -1,0 +1,61 @@
+.barbecue__container {
+  font-family: "Tajawal";
+}
+.background {
+  position: absolute;
+  z-index: -2;
+  top: 200px;
+  height: 330rem
+}
+.barbecue__section1 {
+  position: relative;
+}
+.barbecue__section1 .cookingPan {
+  position: relative;
+  left: 600px;
+}
+.barbecue__section1 h1,
+.barbecue__section1 p {
+  position: absolute;
+  top: 70px;
+  color: #431818;
+  text-shadow: 0 4px 24px #552e2e65;
+}
+.barbecue__section1 h1 {
+  font-size: 50px;
+  left: 110px;
+}
+.barbecue__section1 p {
+  opacity: 69%;
+  text-shadow: 0 4px 15.1px #552e2ea9;
+  width: 550px;
+  direction: rtl;
+  left: 63px;
+  top: 190px;
+  font-size: 22px;
+  font-weight: 300;
+}
+.barbecue__section2 .title,
+.barbecue__section3 .title {
+  position: relative;
+  color: #431818;
+  font-size: 61px;
+  text-align: center;
+  text-shadow: 0 4px 24px #552e2e5d;
+  left:50px;
+}
+.mealsContainer {
+  position: relative;
+  top: 40px;
+  display: grid;
+  grid-template-rows: 33% 33% 34%;
+  grid-template-columns: 50% 50%;
+}
+.chefsContainer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  left: 150px;
+}

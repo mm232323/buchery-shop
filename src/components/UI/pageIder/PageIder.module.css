@@ -1,0 +1,21 @@
+.ider__container {
+ position:relative;
+ top:190px;
+ font-family: 'Tajawal';
+ color:white;
+}
+.ider__container img {
+ width:1424px;
+ box-shadow:0 10px 35px 0 rgba(0, 0, 0, 0.274);
+ border-bottom-left-radius: 95px;
+ border-bottom-right-radius: 95px;
+}
+.ider__container h1 {
+ font-size:80px;
+ position: relative;
+ text-align: center;
+ left:40px;
+ top:-260px;
+ width:100%;
+ font-weight:500;
+}

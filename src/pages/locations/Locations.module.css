@@ -1,0 +1,16 @@
+.locations__background {
+ position:absolute;
+ top:400px;
+ height:2600px;
+ z-index:-2;
+}
+.locations__section1 {
+ position:relative;
+ display: flex;
+ flex-direction: column;
+ left:50%;
+ transform:translateX(-50%);
+ align-items: center;
+ top:90px;
+ padding-bottom:120px;
+}

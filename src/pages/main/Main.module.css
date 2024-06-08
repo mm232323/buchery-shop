@@ -1,0 +1,85 @@
+.background {
+  z-index: -1;
+  position: absolute;
+  height:fit-content
+}
+.main__point1,
+.main__point2,
+.main__point3 {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 80px;
+  top: 650px;
+  border: 1px white solid;
+  border-radius: 100%;
+  background-color: white;
+  z-index: 4;
+}
+.main__point2 {
+  right: 120px;
+}
+.main__point3 {
+  right: 160px;
+}
+.active {
+  background-color: #711f1f;
+}
+.main__section1 {
+  position: relative;
+}
+.main__section2,
+.main__section3,
+.main__section4 {
+  position: relative;
+  top: 700px;
+}
+.main__section2 h1,
+.main__section3 h1 {
+  color: #571d1d;
+  font-size: 71px;
+  font-weight: 600;
+  position: relative;
+  left: 50%;
+}
+.main__section2 .details__container {
+  position: relative;
+  display: flex;
+  left: 60px;
+}
+.main__section3 {
+  top: 720px;
+}
+.main__section3 .services__container {
+  display: flex;
+  position: relative;
+  left: 30px;
+}
+.main__section4 {
+  top: 760px;
+  height:1700px
+}
+.main__section5 {
+  font-family:'Tajawal';
+  position:relative;
+  top: -70px;
+  background-color:#ecececad;
+  left:0;
+  width:1424px;
+  height:929px;
+  direction:rtl;
+  margin-bottom: -30px;
+}
+.main__section5 img {
+  position:absolute;
+  top:-20px;
+  left:0
+}
+.main__section5 h1 {
+  position:relative;
+  color:#571d1d;
+  font-size:45px;
+  font-weight: 400;
+  right:25px;
+  top:40px;
+}

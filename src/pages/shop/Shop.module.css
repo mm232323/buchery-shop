@@ -1,0 +1,35 @@
+.shop__headers {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.shop__products {
+  font-family: "Tajawal";
+  display: flex;
+  flex-direction: column;
+}
+.shop__links {
+  height: 828px;
+  width: 1424px;
+  overflow: hidden;
+}
+.shop__links .images__container {
+  display: flex;
+}
+.slaughter__text,
+.barbecue__text {
+  position: absolute;
+  color: white;
+  font-weight: 500;
+  font-size: 59px;
+  z-index: 2;
+  font-family: "Tajawal";
+  text-align: center;
+}
+.slaughter__text {
+  direction: rtl;
+  transform: translate(47rem, -40rem);
+}
+.barbecue__text {
+  transform: translate(3.6rem, -44rem);
+}

@@ -1,0 +1,107 @@
+.contact__container {
+ font-family:'Tajawal'
+}
+.contact__background {
+ position:absolute;
+ top:200px;
+ z-index:-2
+}
+.contact__section1 {
+ text-align:center;
+ color:#571D1D
+}
+.contact__section1 h1 {
+ font-weight: 600;
+ font-size:97px;
+ text-shadow:0 4px 23.5px #571d1d52;
+ position:relative;
+ left:40px;
+}
+.contact__section1 p {
+ font-weight:200;
+ font-size:37px;
+ opacity:61%;
+ text-shadow:0 4px 23.5px #571d1de0;
+ width:800px;
+ position:relative;
+ left:280px;
+}
+.contact__section2,
+.contact__section3 {
+ width:1424px;
+ height:979px;
+ background-image:linear-gradient(to bottom,#f1e4e4a1,#e4e5f1d7);
+ color:#571D1D;
+}
+.contact__section2 .ico1,
+.contact__section3 .ico2{
+ position:relative;
+ top:50%;
+ transform: translateY(-50%);
+}
+.contact__section2 h1,
+.contact__section3 h1 {
+ font-weight:500;
+ text-align: end;
+ font-size:69px;
+ position:relative;
+ top:-500px;
+ padding-right:30px;
+}
+.contact__section2 .message_sender__container {
+ position:absolute;
+}
+.contact__container hr {
+ position:absolute;
+ border-top:1px #571D1D solid;
+ width:1424px;
+ transform: translateY(-10px);
+}
+.contact__section3 {
+ height:567px;
+}
+.contact__section3 h3 {
+ position:relative;
+ font-size:38px;
+ font-weight:300;
+ direction:rtl;
+ padding-right:90px;
+ top:-56rem;
+}
+.contact__section3 .icons {
+ position:relative;
+ direction:rtl;
+ top:-31.25rem;
+ display:flex;
+ flex-direction:column;
+ flex-shrink: 40px;
+}
+.contact__section3 .icons .icon {
+ padding-right:30px;
+ padding-bottom:47px
+}
+.contact__section4 {
+ color:white;
+ height: 685px;
+}
+.contact__section4 img {
+ z-index:-2;
+}
+.contact__section4 h1 {
+ font-size:96px;
+ font-weight:500;
+ position:absolute;
+ transform:translateY(-43rem);
+ left:34rem;
+}
+.contact__section4 p {
+ font-size:35px;
+ font-weight:200;
+ opacity:69%;
+ width:900px;
+ position:absolute;
+ text-align: center;
+ left:13.5rem;
+ z-index:12;
+ transform: translateY(-450px);
+}
