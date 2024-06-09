@@ -1,6 +1,7 @@
 import styles from "./Viewer.module.css";
 import Button from "../../UI/button/Button";
 import { mainData } from "../../../util/interfaces";
+import ImageComponent from "../../UI/ImageComp/ImageComponent";
 const Viewer: React.FC<mainData> = (props) => {
   return (
     <div
@@ -9,7 +10,7 @@ const Viewer: React.FC<mainData> = (props) => {
       style={{ fontFamily: "Tajawal" }}
     >
       <div className={styles.viewer__shadow} />
-      <img
+      <ImageComponent
         src={props.img}
         className={styles.viewer__background}
       />
