@@ -1,15 +1,17 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Tajawal" sans-serif;
   overflow-x: hidden;
 }
 .back {
   margin: 0;
   padding: 0;
 }
-
+.startPage {
+  font-family: "Tajawal" sans-serif;
+}
 .container {
+  font-family: "Tajawal" sans-serif;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);

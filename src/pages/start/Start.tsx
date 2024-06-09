@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Logo from "/logo.png";
 export default function StartingPage() {
   return (
-    <div className={styles.page}>
+    <div className={styles.startPage}>
       <img src={background} className={styles.back} alt="background" />
       <div className={styles.container} style={{ fontFamily: "Tajawal" }}>
         <img src={titleP} className={styles.title} alt="title photo" />
