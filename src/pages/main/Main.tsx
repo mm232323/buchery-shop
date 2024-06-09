@@ -27,7 +27,6 @@ export default function Main() {
     <div style={{fontFamily:"Tajawal"}}>
       <Header theme="light" />
       <img className={styles.background} src={background} alt="background" />
-      <section className={styles.main__section1}></section>
       <Viewer
         key={view.key}
         title={view.title}
