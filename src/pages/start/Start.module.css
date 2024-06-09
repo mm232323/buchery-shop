@@ -36,6 +36,7 @@ body {
 }
 .but:hover {
   transform: scale(1.1);
+  color:#380808;
 }
 .logo {
   position: relative;
