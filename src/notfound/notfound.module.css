@@ -1,0 +1,29 @@
+.notfound__container {
+ position:relative;
+ display:flex;
+ flex-direction:column;
+ justify-content: center;
+ text-align: center;
+ top:200px;
+ left:20px;
+}
+.notfound__container .notfound__image {
+ width:300px;
+ height:300px;
+ position:relative;
+ left:50%;
+ transform:translateX(-50%);
+ margin-bottom:-80px;
+}
+.notfound__container .notfound__title {
+ letter-spacing: -3px;
+ font-size:100px;
+ color:#2ab1b1;
+ text-shadow:4px 6px 12px #2ab1b146;
+ margin-bottom:-5px;
+}
+.notfound__container p {
+ color:#0e5252;
+ opacity:60%;
+ font-size:15px;
+}

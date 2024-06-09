@@ -14,8 +14,9 @@ import Cart from "./pages/shop/cart/Cart";
 import MainLayout from "./Layout";
 import ShopLayout from './pages/shop/shopLayout'
 import {loader as mainLoader} from './pages/main/Main'
+import NotFound from "./notfound/notfound";
 const router = createBrowserRouter([
-  { path: "/", element: <StartingPage /> },
+  { path: "/", element: <StartingPage />,errorElement:<NotFound /> },
   {
     path: "/main",
     element: <MainLayout />,
