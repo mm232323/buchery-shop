@@ -27,3 +27,7 @@
  opacity:60%;
  font-size:15px;
 }
+.notfound__container .notfound__title::selection {
+ background-color:#2ab1b1;
+ color:white;
+}
