@@ -1,7 +1,10 @@
+body {
+  overflow-x:hidden
+}
 .background {
   z-index: -1;
   position: absolute;
-  height:fit-content
+  height:fit-content;
 }
 .main__point1,
 .main__point2,

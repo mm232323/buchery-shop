@@ -14,7 +14,7 @@ import freshRedMeat from "/freshRedMeatButchery.png";
 import cookingMeat from "/cookingMeatOverTheFlames.png";
 import { mainData } from "../../util/interfaces";
 import Offer from "../../components/main/offer/Offer";
-import smallGoat from '/smallGoat.png'
+import smallGoat from "/smallGoat.png";
 import MessageSender from "../../components/main/messageSender/MessageSender";
 export default function Main() {
   const data = useLoaderData() as mainData[];
@@ -22,19 +22,18 @@ export default function Main() {
   function handleSelect(id: number) {
     setselectedId(id);
   }
-  const view = data.filter((view) => view.id == selectedId)[0];
+  const showingView = data.map((view) =>
+    view.id == selectedId ? (
+      <Viewer key={view.key} mainData={view} display={true} />
+    ) : (
+      <Viewer key={view.key} mainData={view} display={false} />
+    )
+  );
   return (
-    <div style={{fontFamily:"Tajawal"}}>
+    <div style={{ fontFamily: "Tajawal" }}>
       <Header theme="light" />
       <img className={styles.background} src={background} alt="background" />
-      <Viewer
-        key={view.key}
-        title={view.title}
-        desc={view.desc}
-        img={view.img}
-        url={view.url}
-        urlText={view.urlText}
-      />
+      {showingView}
       <div
         className={`${styles.main__point1} active ${
           selectedId == 0 ? styles.active : ""
@@ -96,15 +95,13 @@ export default function Main() {
         <Offer />
       </section>
       <section className={styles.main__section5}>
-          <h1>تواصل معنا</h1>
-          <img src={smallGoat} alt="small goat" />
-          <MessageSender Y={10} />
+        <h1>تواصل معنا</h1>
+        <img src={smallGoat} alt="small goat" />
+        <MessageSender Y={10} />
       </section>
     </div>
   );
 }
-
-
 
 // eslint-disable-next-line react-refresh/only-export-components
 export async function loader() {

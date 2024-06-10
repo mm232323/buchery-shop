@@ -36,6 +36,7 @@
  left:60px;
  opacity:59%;
  text-decoration:line-through;
+ text-decoration-line:1px;
 }
 .product_item__details h4 {
  font-weight:500;
