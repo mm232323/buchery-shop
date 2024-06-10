@@ -1,8 +1,9 @@
 import styles from "./SlaughterHouse.module.css";
-import Header from "../../components/layout/header/Header";
-import PageIder from "../../components/UI/pageIder/PageIder";
+import {lazy} from 'react'
+const  Header  = lazy(() => import("../../components/layout/header/Header"));
+const  PageIder = lazy(() => import("../../components/UI/pageIder/PageIder")) ;
 import SlaughterhouseIdImg from "/slaughterhouseIdImg.png";
-import ToolsViewer from "../../components/slaughterhosue/toolsViewer/ToolsViewer";
+const ToolsViewer = lazy(() => import("../../components/slaughterhosue/toolsViewer/ToolsViewer"));
 import Tool1 from "/tool1.png";
 import Tool2 from "/tool2.png";
 import Tool3 from "/tool3.png";

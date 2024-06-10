@@ -1,21 +1,22 @@
 import styles from "./Main.module.css";
-import Header from "../../components/layout/header/Header";
+import {lazy} from 'react'
+const  Header  = lazy(() => import("../../components/layout/header/Header"));
 import background from "/mainPB.svg";
 import { useLoaderData } from "react-router";
-import Viewer from "../../components/main/viewer/Viewer";
+const  Viewer = lazy(() => import("../../components/main/viewer/Viewer"))
 import { useState } from "react";
-import Detail from "../../components/main/detail/Detail";
+const  Detail = lazy(() => import("../../components/main/detail/Detail"))
 import cowHealth from "/cowHealth.png";
 import cowEat from "/cowEat.png";
 import freshMeat from "/freshMeat.png";
-import Service from "../../components/main/service/Service";
+const Service = lazy(() => import("../../components/main/service/Service"))
 import camelInDesert from "/camelInDesert.png";
 import freshRedMeat from "/freshRedMeatButchery.png";
 import cookingMeat from "/cookingMeatOverTheFlames.png";
 import { mainData } from "../../util/interfaces";
-import Offer from "../../components/main/offer/Offer";
+const Offer = lazy(() => import("../../components/main/offer/Offer"))
 import smallGoat from "/smallGoat.png";
-import MessageSender from "../../components/main/messageSender/MessageSender";
+const MessageSender = lazy(() => import("../../components/main/messageSender/MessageSender"))
 export default function Main() {
   const data = useLoaderData() as mainData[];
   const [selectedId, setselectedId] = useState(0);

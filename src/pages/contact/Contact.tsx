@@ -1,6 +1,7 @@
-import Header from "../../components/layout/header/Header";
-import MessageSender from "../../components/main/messageSender/MessageSender";
-import PageIder from "../../components/UI/pageIder/PageIder";
+import {lazy} from 'react'
+const  Header  = lazy(() => import("../../components/layout/header/Header"));
+const MessageSender  = lazy(() => import("../../components/main/messageSender/MessageSender"))
+const PageIder  = lazy(() => import("../../components/UI/pageIder/PageIder"))
 import styles from "./Contact.module.css";
 import contactIdImg from "/contactIdImg.png";
 import contactBg from "/contactBg.png";
@@ -9,7 +10,7 @@ import contactingIcon2 from "/contactingIcon2.png";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import { IoLogoWhatsapp } from "react-icons/io";
 import locationLinkImg from "/locationLinkImg.png";
-import Button from "../../components/UI/button/Button";
+const Button  = lazy(() => import("../../components/UI/button/Button"))
 export default function Contact() {
   return (
     <div className={styles.contact__container}>

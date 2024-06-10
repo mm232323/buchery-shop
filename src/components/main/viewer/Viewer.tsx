@@ -1,5 +1,6 @@
 import styles from "./Viewer.module.css";
-import Button from "../../UI/button/Button";
+import {lazy} from 'react'
+const Button = lazy(() => import("../../UI/button/Button"))
 import { mainData } from "../../../util/interfaces";
 import { AnimatePresence, motion } from "framer-motion";
 const Viewer: React.FC<{ mainData: mainData; display: boolean }> = (props) => {

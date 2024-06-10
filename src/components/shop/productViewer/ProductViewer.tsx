@@ -1,8 +1,11 @@
 import styles from "./ProductViewer.module.css";
+import { lazy } from "react";
 import { shopProdsData } from "../../../util/interfaces";
-import ProductItemViewer from "./productItemViewer/ProductItemViewer";
+const ProductItemViewer = lazy(
+  () => import("./productItemViewer/ProductItemViewer")
+);
 import { memo } from "react";
-const ProductViewer: React.FC<{ product: shopProdsData}> = memo((props) => {
+const ProductViewer: React.FC<{ product: shopProdsData }> = memo((props) => {
   return (
     <div
       className={styles.product__container}
@@ -23,5 +26,5 @@ const ProductViewer: React.FC<{ product: shopProdsData}> = memo((props) => {
       </div>
     </div>
   );
-})
+});
 export default ProductViewer;

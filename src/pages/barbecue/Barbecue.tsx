@@ -1,14 +1,15 @@
 import styles from "./Barbecue.module.css";
-import Header from "../../components/layout/header/Header";
+import {lazy} from 'react'
+const  Header  = lazy(() => import("../../components/layout/header/Header"));
 import background from "/barbecuePB.svg";
-import PageIder from "../../components/UI/pageIder/PageIder";
+const PageIder =  lazy(() => import("../../components/UI/pageIder/PageIder"))
 import barbecueIdImg from "/barbecueIdImg.png";
 import cookingPan from "/cookingPan.png";
 import { useQuery } from "@tanstack/react-query";
 import { fetchMeals } from "../../util/http";
-import MealViewer from "../../components/barbecue/mealViewer/MealViewer";
-import LoadingSpinner from "../../components/UI/loadingSpinner/LoadingSpinner";
-import ChefViewer from "../../components/barbecue/chefViewer/ChefViewer";
+const  MealViewer  = lazy(() => import("../../components/barbecue/mealViewer/MealViewer"))
+const  LoadingSpinner = lazy(() => import("../../components/UI/loadingSpinner/LoadingSpinner"))
+const  ChefViewer = lazy(() => import("../../components/barbecue/chefViewer/ChefViewer"))
 import Chef1 from "/chef1.png";
 import Chef2 from "/chef2.png";
 import Chef3 from "/chef3.png";

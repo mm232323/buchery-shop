@@ -30,7 +30,7 @@ const Barbecue = lazy(() => import("./pages/barbecue/Barbecue"));
 
 const NotFound = lazy(() => import("./notfound/notfound"));
 
-const Loading = lazy(() => import("./loadingPage/Loading"));
+const Loading = lazy(() => import("./pages/loadingPage/Loading"));
 
 const router = createBrowserRouter([
   {

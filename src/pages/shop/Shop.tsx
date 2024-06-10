@@ -1,16 +1,17 @@
 import styles from "./Shop.module.css";
-import Header from "../../components/layout/header/Header";
-import PageIder from "../../components/UI/pageIder/PageIder";
+import {lazy} from 'react'
+const  Header  = lazy(() => import("../../components/layout/header/Header"));
+const PageIder  = lazy(() => import("../../components/UI/pageIder/PageIder"))
 import shopIdImg from "/shopIdImg.png";
 import { fetchShopProducts } from "../../util/http";
 import { useQuery } from "@tanstack/react-query";
-import LoadingSpinner from "../../components/UI/loadingSpinner/LoadingSpinner";
-import ScrollButton from "../../components/shop/scrollButton/ScrollButton";
-import ProductViewer from "../../components/shop/productViewer/ProductViewer";
+const LoadingSpinner  = lazy(() => import("../../components/UI/loadingSpinner/LoadingSpinner"))
+const ScrollButton  = lazy(() => import("../../components/shop/scrollButton/ScrollButton"))
+const ProductViewer  = lazy(() => import("../../components/shop/productViewer/ProductViewer"))
 import { AnimatePresence } from "framer-motion";
 import slaughterLinkImg from "/slaughterhouseLinkImg.png";
 import barbecueLinkImg from "/barbecueLinkImg.png";
-import Button from "../../components/UI/button/Button";
+const Button = lazy(() => import("../../components/UI/button/Button"))
 export default function Shop() {
   const { data, isPending, isError, error } = useQuery({
     queryKey: ["products"],

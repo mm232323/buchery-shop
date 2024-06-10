@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { postCartData } from "../../../../util/http";
 import { cartProdsData, shopProdItemData } from "../../../../util/interfaces";
 import styles from "./ProductItemViewer.module.css";
@@ -6,7 +7,7 @@ const ProductItemViewer: React.FC<{
   productItem: shopProdItemData;
   color: string;
   type: string;
-}> = (props) => {
+}> = memo((props) => {
   function addToCart(productItm: shopProdItemData) {
     const cartDataProd: cartProdsData = {
       name: productItm.name,
@@ -37,14 +38,10 @@ const ProductItemViewer: React.FC<{
           onClick={() => addToCart(props.productItem)}
         >
           {<p>اضف إلي</p>}
-          <FaCartPlus
-            color="white"
-            className={styles.icon}
-            size={25}
-          />
+          <FaCartPlus color="white" className={styles.icon} size={25} />
         </button>
       </div>
     </div>
   );
-};
+})
 export default ProductItemViewer;

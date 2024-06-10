@@ -1,10 +1,11 @@
 import styles from "./Cart.module.css";
-import Header from "../../../components/layout/header/Header";
+import {lazy} from 'react'
+const Header = lazy(() => import("../../../components/layout/header/Header"))
 import { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { fetchCartData } from "../../../util/http";
-import LoadingSpinner from "../../../components/UI/loadingSpinner/LoadingSpinner";
-import CartItemViewer from "../../../components/cart/cartItemViewer/CartItemViewer";
+const LoadingSpinner = lazy(() => import("../../../components/UI/loadingSpinner/LoadingSpinner"))
+const CartItemViewer = lazy(() => import("../../../components/cart/cartItemViewer/CartItemViewer"))
 import paypal from "/paypal.png";
 import visa from "/visa.png";
 import masterCard from "/masterCard.png";

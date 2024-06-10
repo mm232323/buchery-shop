@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./MealViewer.module.css";
 const MealViewer: React.FC<{
   name: string;

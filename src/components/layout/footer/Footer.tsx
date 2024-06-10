@@ -2,7 +2,8 @@ import styles from "./Footer.module.css";
 import logo from "/whiteLogo.svg";
 import { CiFacebook, CiTwitter, CiInstagram } from "react-icons/ci";
 import { NavLink } from "react-router-dom";
-export default function Footer() {
+import {memo} from 'react'
+const Footer = memo(() => {
   return (
     <div className={styles.footer__container} style={{ fontFamily: "Tajawal" }}>
       <NavLink to="/">
@@ -72,4 +73,5 @@ export default function Footer() {
       </div>
     </div>
   );
-}
+})
+export default Footer

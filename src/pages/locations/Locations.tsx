@@ -1,12 +1,13 @@
 import styles from "./Locations.module.css";
-import Header from "../../components/layout/header/Header";
-import PageIder from "../../components/UI/pageIder/PageIder";
+import {lazy} from 'react'
+const  Header  = lazy(() => import("../../components/layout/header/Header"));
+const PageIder = lazy(() => import("../../components/UI/pageIder/PageIder"));
 import LocationsIdImg from "/locationsIdImg.png";
 import LocationsBg from "/locationsBg.png";
 import { useQuery } from "@tanstack/react-query";
 import { fetchLocations } from "../../util/http";
-import LoadingSpinner from "../../components/UI/loadingSpinner/LoadingSpinner";
-import LocViewer from "../../components/locations/locViewer/LocViewer";
+const LoadingSpinner = lazy(() => import("../../components/UI/loadingSpinner/LoadingSpinner"))
+const LocViewer = lazy(() => import("../../components/locations/locViewer/LocViewer"))
 export default function Locations() {
   const { data, isPending, isError, error } = useQuery({
     queryKey: ["locations"],

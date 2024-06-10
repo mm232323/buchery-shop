@@ -6,7 +6,7 @@ import saveLogo from "/saveL.svg";
 import { NavLink } from "react-router-dom";
 import { memo, Suspense,lazy } from "react";
 import { useSelector } from "react-redux";
-const Loading = lazy(() => import('../../../loadingPage/Loading'))
+const Loading = lazy(() => import('../../../pages/loadingPage/Loading'))
 const Header: React.FC<{ theme: string }> = memo(({ theme }) => {
   const cartCount = useSelector((state) => state) as { totalProducts: number };
   return (
