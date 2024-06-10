@@ -1,8 +1,11 @@
 import { Outlet } from "react-router";
-import Footer from "./components/layout/footer/Footer";
+import { lazy } from "react";
+const ScrollToTop = lazy(() => import("./scrollToTop"));
+const Footer = lazy(() => import("./components/layout/footer/Footer"));
 export default function MainLayout() {
   return (
     <>
+      <ScrollToTop />
       <Outlet />
       <Footer />
     </>

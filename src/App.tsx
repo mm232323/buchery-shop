@@ -3,6 +3,7 @@ import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import { loader as mainLoader } from "./pages/main/Main";
+
 import { lazy, Suspense } from "react";
 
 const StartingPage = lazy(() => import("./pages/start/Start"));
@@ -41,7 +42,6 @@ const router = createBrowserRouter([
     ),
     errorElement: <NotFound />,
   },
-
   {
     path: "/main",
     element: (
@@ -124,7 +124,7 @@ const router = createBrowserRouter([
         ),
       },
     ],
-  },
+  }
 ]);
 
 function App() {
