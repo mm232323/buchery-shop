@@ -87,3 +87,8 @@
   transform: scale(1.2);
  }
 }
+.product_item__addToCart:active {
+ .icon {
+  transform: scale(1);
+ }
+}

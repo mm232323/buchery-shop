@@ -1,29 +1,54 @@
 import styles from "./Footer.module.css";
 import logo from "/whiteLogo.svg";
 import { CiFacebook, CiTwitter, CiInstagram } from "react-icons/ci";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 export default function Footer() {
   return (
-    <div
-      className={styles.footer__container}
-      style={{ fontFamily: "Tajawal"}}
-    >
-      <Link to="/">
+    <div className={styles.footer__container} style={{ fontFamily: "Tajawal" }}>
+      <NavLink to="/">
         <img className={styles.footer__logo} src={logo} alt="logo" />
-      </Link>
+      </NavLink>
       <div className={styles.footer__links}>
-        <Link to="/main/locations">
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? styles.active__footer__link
+              : styles.unactive__footer__link
+          }
+          to="/main/locations"
+        >
           <h3>الفروع</h3>
-        </Link>
-        <Link to="/main/barbecue">
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? styles.active__footer__link
+              : styles.unactive__footer__link
+          }
+          to="/main/barbecue"
+        >
           <h3>الشوي والتسوية</h3>
-        </Link>
-        <Link to="/main/slaughterhouse">
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? styles.active__footer__link
+              : styles.unactive__footer__link
+          }
+          to="/main/slaughterhouse"
+        >
           <h3>الذبح والجزارة</h3>
-        </Link>
-        <Link to="/main/shop">
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? styles.active__footer__link
+              : styles.unactive__footer__link
+          }
+          to="/main/shop"
+        >
           <h3>السوق</h3>
-        </Link>
+        </NavLink>
       </div>
       <div className={styles.footer__socials}>
         <CiFacebook
