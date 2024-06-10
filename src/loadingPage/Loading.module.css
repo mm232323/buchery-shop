@@ -1,0 +1,10 @@
+.LoadingGif {
+ width:200px;
+ position:absolute;
+ top:50%;
+ transform:translateY(-50%)
+
+}
+.footer__container {
+ display:none
+}

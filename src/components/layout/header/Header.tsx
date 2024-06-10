@@ -4,11 +4,13 @@ import styles from "./Header.module.css";
 import cartLogo from "/cartL.svg";
 import saveLogo from "/saveL.svg";
 import { NavLink } from "react-router-dom";
-import { memo } from "react";
+import { memo, Suspense,lazy } from "react";
 import { useSelector } from "react-redux";
+const Loading = lazy(() => import('../../../loadingPage/Loading'))
 const Header: React.FC<{ theme: string }> = memo(({ theme }) => {
   const cartCount = useSelector((state) => state) as { totalProducts: number };
   return (
+    <Suspense fallback={<Loading />}>
     <header
       className={theme == "dark" ? styles.dark : styles.light}
       style={{ fontFamily: "Tajawal" }}
@@ -119,6 +121,7 @@ const Header: React.FC<{ theme: string }> = memo(({ theme }) => {
       )}
       {theme == "dark" && <div className={styles.seperator}></div>}
     </header>
+    </Suspense>
   );
 })
 export default Header;

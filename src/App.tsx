@@ -2,41 +2,133 @@ import "./App.css";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import StartingPage from "./pages/start/Start";
+import { loader as mainLoader } from "./pages/main/Main";
+import { lazy, Suspense } from "react";
 
-import Main from "./pages/main/Main";
-import Shop from "./pages/shop/Shop";
-import SlaughterHouse from "./pages/slaughterhouse/SlaughterHouse";
-import Barbecue from "./pages/barbecue/Barbecue";
-import Contact from "./pages/contact/Contact";
-import Locations from "./pages/locations/Locations";
-import Cart from "./pages/shop/cart/Cart";
-import MainLayout from "./Layout";
-import ShopLayout from './pages/shop/shopLayout'
-import {loader as mainLoader} from './pages/main/Main'
-import NotFound from "./notfound/notfound";
+const StartingPage = lazy(() => import("./pages/start/Start"));
+
+const Main = lazy(() => import("./pages/main/Main"));
+
+const MainLayout = lazy(() => import("./Layout"));
+
+const Shop = lazy(() => import("./pages/shop/Shop"));
+
+const Cart = lazy(() => import("./pages/shop/cart/Cart"));
+
+const ShopLayout = lazy(() => import("./pages/shop/shopLayout"));
+
+const SlaughterHouse = lazy(
+  () => import("./pages/slaughterhouse/SlaughterHouse")
+);
+
+const Locations = lazy(() => import("./pages/locations/Locations"));
+
+const Contact = lazy(() => import("./pages/contact/Contact"));
+
+const Barbecue = lazy(() => import("./pages/barbecue/Barbecue"));
+
+const NotFound = lazy(() => import("./notfound/notfound"));
+
+const Loading = lazy(() => import("./loadingPage/Loading"));
+
 const router = createBrowserRouter([
-  { path: "/", element: <StartingPage />,errorElement:<NotFound /> },
+  {
+    path: "/",
+    element: (
+      <Suspense fallback={<Loading />}>
+        <StartingPage />
+      </Suspense>
+    ),
+    errorElement: <NotFound />,
+  },
+
   {
     path: "/main",
-    element: <MainLayout />,
+    element: (
+      <Suspense fallback={<Loading />}>
+        <MainLayout />
+      </Suspense>
+    ),
     children: [
-      {path:'/main',element:<Main />,loader:mainLoader},
+      {
+        path: "/main",
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Main />
+          </Suspense>
+        ),
+        loader: mainLoader,
+      },
+
       {
         path: "/main/shop",
-        element: <ShopLayout />,
-        children: [{ path: "/main/shop", element: <Shop /> },{ path: "/main/shop/cart", element: <Cart /> }],
+        element: (
+          <Suspense fallback={<Loading />}>
+            <ShopLayout />
+          </Suspense>
+        ),
+        children: [
+          {
+            path: "/main/shop",
+            element: (
+              <Suspense fallback={<Loading />}>
+                <Shop />
+              </Suspense>
+            ),
+          },
+
+          {
+            path: "/main/shop/cart",
+            element: (
+              <Suspense fallback={<Loading />}>
+                <Cart />
+              </Suspense>
+            ),
+          },
+        ],
       },
-      { path: "/main/slaughterhouse", element: <SlaughterHouse /> },
-      { path: "/main/barbecue", element: <Barbecue /> },
-      { path: "/main/contact", element: <Contact /> },
-      { path: "/main/locations", element: <Locations /> },
+
+      {
+        path: "/main/slaughterhouse",
+        element: (
+          <Suspense fallback={<Loading />}>
+            <SlaughterHouse />
+          </Suspense>
+        ),
+      },
+
+      {
+        path: "/main/barbecue",
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Barbecue />
+          </Suspense>
+        ),
+      },
+
+      {
+        path: "/main/contact",
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Contact />
+          </Suspense>
+        ),
+      },
+
+      {
+        path: "/main/locations",
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Locations />
+          </Suspense>
+        ),
+      },
     ],
   },
 ]);
 
 function App() {
-  return <RouterProvider router={router} />
+  return <RouterProvider router={router} />;
 }
 
 export default App;
