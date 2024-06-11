@@ -10,7 +10,7 @@ export default function StartingPage() {
   function handleLinkText() {
     setPathLoading(true)
   }
-  if (pathLoading) return <Loading top={25} />
+  if (pathLoading) return <Loading top={18} />
   return (
     <div className={styles.startPage}>
       <img src={background} className={styles.back} alt="background" />
