@@ -74,7 +74,7 @@
  position:absolute;
  left:30px;
  top:14px;
- transition-duration:.45s;
+ transition-duration:.3s;
 }
 .product_item__addToCart:hover {
  p {
