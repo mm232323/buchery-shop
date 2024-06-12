@@ -1,0 +1,1 @@
+import{j as t,L as s}from"./index-Beml1ju3.js";const i="_service__container_vytq6_1",n={service__container:i},a=e=>t.jsxs(s,{to:e.linkTo,className:n.service__container,style:{fontFamily:"Tajawal"},children:[t.jsx("img",{src:e.img,alt:e.text}),t.jsx("h2",{children:e.text})]});export{a as default};
