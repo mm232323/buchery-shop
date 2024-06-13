@@ -5,7 +5,8 @@
  transform:translateY(-50%);
  font-family:"Tajawal";
  left:47.5%;
- transform:translateX(-50%)
+ transform:translateX(-50%);
+ transition-duration:.4s;
 }
 .loadingP__container .footer__container {
  display:none
