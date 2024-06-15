@@ -5,7 +5,7 @@ const Loading:React.FC<{top?:number}> = ({top}) => {
   return (
     <div className={styles.loadingP__container}>
       <center>
-        <motion.img animate={{opacity:1,scale:1}} exit={{opacity:0,scale:0}} style={{top:(top!) + 'rem'}} className={styles.LoadingGif} src={LoadingImg} alt="loading img" />
+        <motion.img animate={{opacity:1,translateY:0}} exit={{opacity:0,translateY:30}} style={{top:(top!) + 'rem'}} className={styles.LoadingGif} src={LoadingImg} alt="loading img" />
       </center>
     </div>
   );
