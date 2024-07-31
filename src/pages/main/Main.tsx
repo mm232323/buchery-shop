@@ -1,22 +1,24 @@
 import styles from "./Main.module.css";
-import {lazy} from 'react'
-const  Header  = lazy(() => import("../../components/layout/header/Header"));
+import { lazy } from "react";
+const Header = lazy(() => import("../../components/layout/header/Header"));
 import background from "/mainPB.svg";
 // import { useLoaderData } from "react-router";
-// const  Viewer = lazy(() => import("../../components/main/viewer/Viewer"))
+// const Viewer = lazy(() => import("../../components/main/viewer/Viewer"));
 // import { useState } from "react";
-const  Detail = lazy(() => import("../../components/main/detail/Detail"))
+const Detail = lazy(() => import("../../components/main/detail/Detail"));
 import cowHealth from "/cowHealth.png";
 import cowEat from "/cowEat.png";
 import freshMeat from "/freshMeat.png";
-const Service = lazy(() => import("../../components/main/service/Service"))
+const Service = lazy(() => import("../../components/main/service/Service"));
 import camelInDesert from "/camelInDesert.png";
 import freshRedMeat from "/freshRedMeatButchery.png";
 import cookingMeat from "/cookingMeatOverTheFlames.png";
 // import { mainData } from "../../util/interfaces";
-const Offer = lazy(() => import("../../components/main/offer/Offer"))
+const Offer = lazy(() => import("../../components/main/offer/Offer"));
 import smallGoat from "/smallGoat.png";
-const MessageSender = lazy(() => import("../../components/main/messageSender/MessageSender"))
+const MessageSender = lazy(
+  () => import("../../components/main/messageSender/MessageSender")
+);
 export default function Main() {
   // const data = useLoaderData() as mainData[];
   // const [selectedId, setselectedId] = useState(0);
@@ -34,8 +36,8 @@ export default function Main() {
     <div style={{ fontFamily: "Tajawal" }}>
       <Header theme="light" />
       <img className={styles.background} src={background} alt="background" />
-      {/* {showingView} */}
-      {/* <div
+      {/* {showingView}
+      <div
         className={`${styles.main__point1} active ${
           selectedId == 0 ? styles.active : ""
         }`}
@@ -105,11 +107,11 @@ export default function Main() {
 }
 
 // eslint-disable-next-line react-refresh/only-export-components
-// export async function loader() {
-//   const response = await fetch("https://butchery-shop-api.onrender.com/main");
-//   if (!response.ok)
-//     throw new Error("unexpected error happened when fetching your main data");
-//   const data: { title: string; desc: string; img: string; url: string }[] =
-//     await response.json();
-//   return data;
-// }
+export async function loader() {
+  const response = await fetch("https://butchery-shop-api.onrender.com/main");
+  if (!response.ok)
+    throw new Error("unexpected error happened when fetching your main data");
+  const data: { title: string; desc: string; img: string; url: string }[] =
+    await response.json();
+  return data;
+}
