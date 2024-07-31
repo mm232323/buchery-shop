@@ -2,9 +2,9 @@ import styles from "./Main.module.css";
 import {lazy} from 'react'
 const  Header  = lazy(() => import("../../components/layout/header/Header"));
 import background from "/mainPB.svg";
-import { useLoaderData } from "react-router";
-const  Viewer = lazy(() => import("../../components/main/viewer/Viewer"))
-import { useState } from "react";
+// import { useLoaderData } from "react-router";
+// const  Viewer = lazy(() => import("../../components/main/viewer/Viewer"))
+// import { useState } from "react";
 const  Detail = lazy(() => import("../../components/main/detail/Detail"))
 import cowHealth from "/cowHealth.png";
 import cowEat from "/cowEat.png";
@@ -13,29 +13,29 @@ const Service = lazy(() => import("../../components/main/service/Service"))
 import camelInDesert from "/camelInDesert.png";
 import freshRedMeat from "/freshRedMeatButchery.png";
 import cookingMeat from "/cookingMeatOverTheFlames.png";
-import { mainData } from "../../util/interfaces";
+// import { mainData } from "../../util/interfaces";
 const Offer = lazy(() => import("../../components/main/offer/Offer"))
 import smallGoat from "/smallGoat.png";
 const MessageSender = lazy(() => import("../../components/main/messageSender/MessageSender"))
 export default function Main() {
-  const data = useLoaderData() as mainData[];
-  const [selectedId, setselectedId] = useState(0);
-  function handleSelect(id: number) {
-    setselectedId(id);
-  }
-  const showingView = data.map((view) =>
-    view.id == selectedId ? (
-      <Viewer key={view.key} mainData={view} display={true} />
-    ) : (
-      <Viewer key={view.key} mainData={view} display={false} />
-    )
-  );
+  // const data = useLoaderData() as mainData[];
+  // const [selectedId, setselectedId] = useState(0);
+  // function handleSelect(id: number) {
+  //   setselectedId(id);
+  // }
+  // const showingView = data.map((view) =>
+  //   view.id == selectedId ? (
+  //     <Viewer key={view.key} mainData={view} display={true} />
+  //   ) : (
+  //     <Viewer key={view.key} mainData={view} display={false} />
+  //   )
+  // );
   return (
     <div style={{ fontFamily: "Tajawal" }}>
       <Header theme="light" />
       <img className={styles.background} src={background} alt="background" />
-      {showingView}
-      <div
+      {/* {showingView} */}
+      {/* <div
         className={`${styles.main__point1} active ${
           selectedId == 0 ? styles.active : ""
         }`}
@@ -52,7 +52,7 @@ export default function Main() {
           selectedId == 2 ? styles.active : ""
         }`}
         onClick={() => handleSelect(2)}
-      ></div>
+      ></div> */}
       <section className={styles.main__section2}>
         <h1>مهمتنا</h1>
         <div className={styles.details__container}>
