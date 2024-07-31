@@ -105,11 +105,11 @@ export default function Main() {
 }
 
 // eslint-disable-next-line react-refresh/only-export-components
-export async function loader() {
-  const response = await fetch("https://butchery-shop-api.onrender.com/main");
-  if (!response.ok)
-    throw new Error("unexpected error happened when fetching your main data");
-  const data: { title: string; desc: string; img: string; url: string }[] =
-    await response.json();
-  return data;
-}
+// export async function loader() {
+//   const response = await fetch("https://butchery-shop-api.onrender.com/main");
+//   if (!response.ok)
+//     throw new Error("unexpected error happened when fetching your main data");
+//   const data: { title: string; desc: string; img: string; url: string }[] =
+//     await response.json();
+//   return data;
+// }
