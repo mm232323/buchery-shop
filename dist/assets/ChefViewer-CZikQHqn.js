@@ -1,1 +1,0 @@
-import{j as e}from"./index-Beml1ju3.js";const _="_chef__container_1xyzy_1",a="_chef__name_1xyzy_23",n={chef__container:_,chef__name:a},t=c=>e.jsxs("div",{className:n.chef__container,children:[e.jsx("img",{src:c.imgUrl,alt:"chef image"}),e.jsx("h1",{className:n.chef__name,children:c.name}),e.jsx("h4",{children:c.jobTitle})]});export{t as default};

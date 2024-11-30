@@ -1,0 +1,1 @@
+import{j as l}from"./index-BxpujTYj.js";const r="_scroll_button__container_xwrv2_1",c={scroll_button__container:r},e=o=>{function t(n){window.scrollTo({top:n,behavior:"smooth"})}return l.jsx("button",{className:c.scroll_button__container,style:{backgroundColor:o.color},onClick:()=>t(o.scrollPos),children:o.children})};export{e as default};

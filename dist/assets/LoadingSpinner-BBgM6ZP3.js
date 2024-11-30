@@ -1,1 +1,0 @@
-import{j as n}from"./index-Beml1ju3.js";const e="_spinner__container_6x4zu_1",a="_spinner_6x4zu_1",i="_fallbackMessage_6x4zu_1",s={spinner__container:e,spinner:a,fallbackMessage:i};function _(){return n.jsxs("div",{className:s.spinner__container,children:[n.jsx("div",{className:s.spinner}),n.jsx("p",{children:"يتم إستدعاء البيانات"})]})}export{_ as default};
