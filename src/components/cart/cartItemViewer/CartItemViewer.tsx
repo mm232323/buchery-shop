@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { queryClient } from "../../../util/http";
 const CartItemViewer: React.FC<{
   cartItm: cartProdsData;
-  onUpdateCartQty: () => void;
+  onUpdateCartQty: (price: number) => void;
 }> = memo(({ cartItm, onUpdateCartQty }) => {
   const [qty, setQty] = useState(cartItm.quantity);
   const { mutate } = useMutation({
@@ -18,12 +18,12 @@ const CartItemViewer: React.FC<{
   });
   function handleIncreaseQty(cartItem: cartProdsData) {
     mutate({ cartItem, Url: "increase" });
-    onUpdateCartQty();
+    onUpdateCartQty(cartItem.price);
     setQty((pevQty) => pevQty + 1);
   }
   function handleDecreaseQty(cartItem: cartProdsData) {
     mutate({ cartItem, Url: "decrease" });
-    onUpdateCartQty();
+    onUpdateCartQty(-(cartItem.price));
     setQty((pevQty) => pevQty - 1);
   }
   return (

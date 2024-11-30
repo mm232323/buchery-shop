@@ -11,10 +11,9 @@ import visa from "/visa.png";
 import masterCard from "/masterCard.png";
 import americanExpress from "/americanExpress.png";
 export default function Cart() {
-  const [, setUpdateQty] = useState(1);
   const [finalPrice, setFinalPrice] = useState(0);
-  function updateCartQty() {
-    setUpdateQty(Math.random);
+  function updateCartQty(price:number) {
+    setFinalPrice(prevFinalPrice => prevFinalPrice + price)
   }
   const { data, isPending, isError, error } = useQuery({
     queryKey: ["cart"],
